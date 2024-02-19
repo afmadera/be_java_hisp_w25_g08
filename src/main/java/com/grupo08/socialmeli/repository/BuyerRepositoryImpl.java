@@ -14,7 +14,12 @@ public class BuyerRepositoryImpl implements IBuyerRepository {
     private final List<Buyer> listBuyers = new ArrayList<>(Arrays.asList(
         new Buyer(1, "Fabian", new ArrayList<>()),
         new Buyer(2, "Miguel", new ArrayList<>()),
-        new Buyer(3, "Andres", new ArrayList<>())
+        new Buyer(3, "Andres", new ArrayList<>()),
+        new Buyer(4, "Laura", List.of(
+                new Seller(1, "Brayan", new ArrayList<>()),
+                new Seller(2, "Juan", new ArrayList<>()),
+                new Seller(3, "Carlos", new ArrayList<>())
+        ))
     ));
 
 
