@@ -126,7 +126,7 @@ class UserServiceImplTest {
     }
 
     @Test
-    @DisplayName("Get users sorted by name asc")
+    @DisplayName("T-0006 Get users sorted by name asc")
     void getFollowersbyIdAsc() {
         // Arrange
         FollowingPostDto expectedfollowingPost = new FollowingPostDto(
@@ -215,7 +215,7 @@ class UserServiceImplTest {
 
 
     @Test
-    @DisplayName("Get users sorted by name desc")
+    @DisplayName("T-0006 Get users sorted by name desc")
     void getFollowersbyIdDesc() {
         // Arrange
         FollowingPostDto expectedfollowingPost = new FollowingPostDto(
