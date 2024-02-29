@@ -1,8 +1,5 @@
 package com.grupo08.socialmeli.dto;
 
-import java.time.LocalDate;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.grupo08.socialmeli.entity.Product;
 
@@ -24,14 +21,13 @@ public class PostDto implements  Comparable<PostDto> {
     @Positive(message = "El id debe ser mayor a 0.")
     Integer userId;
     @NotBlank(message = "La fecha no puede estar vacía.")
-    @JsonFormat(pattern = "dd-MM-yyyy")
-    LocalDate date;
+    String date;
     Product product;
     Integer category;
     Double price;
 
     @Override
     public int compareTo(PostDto postDto){
-return  this.date.compareTo(postDto.getDate());
+return this.date.compareTo(postDto.getDate());
     }
 }

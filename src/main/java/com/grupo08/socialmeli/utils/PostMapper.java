@@ -1,6 +1,5 @@
 package com.grupo08.socialmeli.utils;
 
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,14 +19,13 @@ public class PostMapper {
     }
 
     public static PostDto toDto(Post post){
-        PostDto postDto = new PostDto(
-                post.getUserId(),
-                post.getDate(),
-                post.getProduct(),
-                post.getCategory(),
-                post.getPrice()
+        return new PostDto(
+            post.getUserId(),
+            post.getDate().toString(),
+            post.getProduct(),
+            post.getCategory(),
+            post.getPrice()
         );
-        return postDto;
     }
 
     public static List<PostDto> ListToDto(List<Post> listPost){
@@ -35,7 +33,7 @@ public class PostMapper {
         for (Post post: listPost){
             PostDto postDto = new PostDto(
                 post.getUserId(), 
-                post.getDate(), 
+                post.getDate().toString(), 
                 post.getProduct(), 
                 post.getCategory(), 
                 post.getPrice()

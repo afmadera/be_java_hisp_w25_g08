@@ -14,6 +14,8 @@ public interface IUserService {
 
     public FollowersDto getFollowers( int idSeller, String order);
 
+
+    FollowedDTO getFollowedSellers(int userId);
     FollowingPostDto postSortWeeks(Integer idUser);
 
     FollowersCountDto countSellerFollowers(int userId);
